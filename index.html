@@ -304,7 +304,7 @@
       if (!ctxAudio) return;
 
       const master = ctxAudio.createGain();
-      master.gain.value = 0.16;
+      master.gain.value = 0.18;
       master.connect(ctxAudio.destination);
 
       const start = ctxAudio.currentTime + 0.02;
@@ -342,9 +342,9 @@
         }
       }
 
-      scheduleLoop(bassPattern, "sawtooth", 0.32, 0.18, 1);
-      scheduleLoop(leadPattern, "triangle", 0.32, 0.08, 1);
-      scheduleLoop(pulsePattern, "square", 0.16, 0.035, 1);
+      scheduleLoop(bassPattern, "sawtooth", 0.32, 0.45, 1);
+      scheduleLoop(leadPattern, "triangle", 0.32, 0.22, 1);
+      scheduleLoop(pulsePattern, "square", 0.16, 0.12, 1);
 
       audioState.bossGain = master;
       audioState.bossNodes = nodes;
